@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //функция для кнопки "+"
+
+        function plus() {
+            //в переменные записываем значения полей
+            a = +window.document.form1.T1.value;
+            b = +window.document.form1.T2.value;
+            //складываем числа и записываем в поле длярезультата
+            window.document.form1.T3.value = a + b;
+        }
+        //функция для кнопки "-"
+        function minus() {
+            //в переменные записываем значения полей
+            a = +window.document.form1.T1.value;
+            b = +window.document.form1.T2.value;
+            //вычитаем числа и записываем в поле для результата
+            window.document.form1.T3.value = a - b;
+        }
+        //функция для кнопки "*"
+        function proizv() {
+            //в переменные записываем значения полей
+            a = +window.document.form1.T1.value;
+            b = +window.document.form1.T2.value;
+            //умножаем числа и записываем в поле для результата
+            window.document.form1.T3.value = a * b;
+        }
+        //функция для кнопки "/"
+        function delen() {
+            //в переменные записываем значения полей
+            a = +window.document.form1.T1.value;
+            b = +window.document.form1.T2.value;
+            //если делитель не 0
+            if (b != 0)
+                //считаем частное и записываем ответ в поле длярезультата
+                window.document.form1.T3.value = a / b
+            //если делитель равен 0
+            else {
+                //выдаем сообщение
+                alert("Делить на ноль нельзя!");
+                //ставим курсор в поле для ввода делителя
+                window.document.form1.T2.focus();
+                //выдаеляем содержимое поля
+                window.document.form1.T2.select();
+            }
+        }
+        //функция для кнопки "X^Y"
+        function stepen() {
+            //в переменные записываем значения полей
+            a = +window.document.form1.T1.value;
+            b = +window.document.form1.T2.value;
+            //считаем степень и записываем ответ в поле для результата
+            window.document.form1.T3.value = Math.pow(a, b);
+        }
+        //функция для кнопки "ABS"
+        function modul() {
+            //в переменную записываем значение поля
+            a = +window.document.form1.T1.value;
+            //считаекм модуль и записываем в поле для  результата
+            window.document.form1.T3.value = Math.abs(a);
+        }
+        //функция для кнопки "SQRT"
+        function koren() {
+            //в переменную записываем значение поля
+            a = +window.document.form1.T1.value;
+            //если исходное не меньше 0
+            if (a >= 0)
+                //считаем корень и записываем ответ в поле для результата
+                window.document.form1.T3.value = Math.sqrt(a)
+            //если число меньше 0
+            else {
+                //выдаем сообщение
+                alert("Нельзя извлечь корень из отрицательного числа!");
+                //ставим курсор в поле для исходных данных
+                window.document.form1.T1.focus();
+                //выделяем содержимое поля
+                window.document.form1.T1.select();
+            }
+        }
+        //функция для кнопки exp (экспонента)
+        function exponent() {
+            a = +window.document.form1.T1.value;
+            window.document.form1.T3.value = Math.exp(a);
+        }
+        //функция для кнопки ln (логарифм)
+        function logarifm() {
+            a = +window.document.form1.T1.value;
+            if (a >= 1)
+                window.document.form1.T3.value = Math.sqrt(a)
+            else {
+                alert("Нельзя расчитать логарифм для значения меньше 1!");
+                window.document.form1.T1.focus();
+                window.document.form1.T1.select();
+            }
+        }
+        //функция для кнопки sin (синус)
+        function sinus() {
+            a = +window.document.form1.T1.value;
+            window.document.form1.T3.value = Math.sin(a);
+        }
+        //функция для кнопки cos (косинус)
+        function cosinus() {
+            a = +window.document.form1.T1.value;
+            window.document.form1.T3.value = Math.cos(a);
+        }
+        //функция для кнопки tg (тангенс)
+        function tangens() {
+            a = +window.document.form1.T1.value;
+            window.document.form1.T3.value = Math.tan(a);
+        }
+        //функция для кнопки ctg (котангенс)
+        function cotangens() {
+            a = +window.document.form1.T1.value;
+            if (a > 0)
+                window.document.form1.T3.value = 1 / Math.tan(a)
+            else {
+                alert("Нельзя рассчитать котангенс из нуля!");
+                window.document.form1.T1.focus();
+                window.document.form1.T1.select();
+            }
+        }
+        //функция для кнопки точность
+        function tochnost() {
+            a = +window.prompt("Введите точность", "2");
+            b = +window.document.form1.T3.value;
+            window.document.form1.T3.value = b.toFixed(a);
+        }
+        //функция для кнопки ceil (округлить вверх)
+        function okruglvverh() {
+            a = +window.document.form1.T3.value;
+            window.document.form1.T3.value = Math.ceil(a);
+        }
+        //функция для кнопки floor (округлить вниз)
+        function okruglvniz() {
+            a = +window.document.form1.T3.value;
+            window.document.form1.T3.value = Math.floor(a);
+        }
+        //функция для кнопки round (округлить)
+        function okrugl() {
+            a = +window.document.form1.T3.value;
+            window.document.form1.T3.value = Math.round(a);
+        }
+        //функция для кнопки СЕ (стереть)
+        function steret() {
+            window.document.form1.T1.value = 0; 
+            window.document.form1.T2.value = 0;
+            window.document.form1.T3.value = 0;
+            window.document.form1.T1.focus();
+            window.document.form1.T1.select();
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form1">
+        <table>
+            <tr>
+                <td colspan="4" align='center'>web калькулятор</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">исходные данные</td>
+                <td colspan="2" align="center">результат</td>
+            </tr>
+            <tr>
+                <td><input type="number" name='T1'></td>
+                <td><input type="number" name="T2"></td>
+                <td colspan="2"><input type="number" readonly="readonly" name='T3'></td>
+            </tr>
+            <tr>
+                <td align="center">математика</td>
+                <td align="center">алгебра</td>
+                <td align="center">тригонометрия</td>
+                <td align="center">результ.</td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" value="+" onclick="plus()"></td>
+                <td align="center"><input type="button" value="abs" onclick="modul()"></td>
+                <td align="center"><input type="button" value="sin" onclick="sinus()"></td>
+                <td align="center"><input type="button" value="точн." onclick="tochnost()"></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" value="-" onclick="minus()"></td>
+                <td align="center"><input type="button" value="sqrt" onclick="koren()"></td>
+                <td align="center"><input type="button" value="cos" onclick="cosinus()"></td>
+                <td align="center"><input type="button" value="ceil" onclick="okruglvverh()"></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" value="*" onclick="proizv()"></td>
+                <td align="center"><input type="button" value="exp" onclick="exponent()"></td>
+                <td align="center"><input type="button" value="tg" onclick="tangens()"></td>
+                <td align="center"><input type="button" value="floor" onclick="okruglvniz"></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" value="/" onclick="delen()"></td>
+                <td align="center"><input type="button" value="ln" onclick="logarifm()"></td>
+                <td align="center"><input type="button" value="ctg" onclick="cotangens()"></td>
+                <td align="center"><input type="button" value="round" onclick="okrugl()"></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="button" value="x^y" onclick="stepen()"></td>
+                <td align="center"></td>
+                <td align="center"></td>
+                <td align="center"><input type="button" value="ce" onclick="steret()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Вадим">
+    <meta name="keywords" content="css, ftp, header, main, footer">
+    <meta name="description" content="Это моя лабораторная работа№3">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой первый простой сайт</title>
+    <!--<base href="http://172.16.50.28/user01/lab4/">-->
+</head>
+
+<body>
+    <table id="main" align="center">
+        <tr>
+            <td colspan="2" id="header">
+                <h1><a href="index.html">Мой первый простой
+                        сайт</a>
+            </td>
+        </tr>
+        <tr>
+            <td id="left">
+                <h2>Навигация</h2>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html" target="w1" onclick="window.open('','w1','width=400,height=300');">Контакты</a></li>
+                    <li><a href="secret.html">неСекретная страница</a></li>
+                    <li><a href="secret copy.html">неСекретная страница2</a></li>
+                    <li><a href="sum.html">Суматор</a></li>
+                    <li><a href="webcalc.html">Web Калькулятор</a></li>
+                </ul>
+                <h2>Ссылки</h2>
+                <ul>
+                    <li><a href="http://yandex.ua" target="_blank">Яндекс</a></li>
+                    <li><a href="http://google.com.ua" target="_blank">Google</a></li>
+                </ul>
+
+                <h2>Вход</h2>
+                <form action="index.html" method="post">
+                    Пользователь:
+                    <div align="right"><input name="login" type="text"></div>
+                    Пароль:
+                    <div align="right"><input name="pwd" type="password"></div>
+                    <div align="right"><input name="ok" type="submit" value="Войти"></div>
+                </form>
+            </td>
+            <td id="content">
+                <h2>Главная</h2>
+                <p><b>Главная страница</b> — самая первая страница, которая
+                    появляется при заходе на сайт.</p>
+                <p>Главная страница есть у всех сайтов, от солидных интернетмагазинов до популярных форумов. Основная
+                    функция главной
+                    страницы – это привлечение внимания целевой аудитории и
+                    конвертации пользователей в реальных клиентов.</p>
+                <p>В Рунете главную страницу часто называют «мордой».
+                    Данный термин прочно вошел в обиход ввиду своей ясности и
+                    краткости. Главную страницу можно именовать и «хомяком».
+                    Происхождение этого определение может быть объяснено искаженным
+                    произношением английского «home page», или «домашняя страница».
+                    Впоследствии вторая часть словосочетания «page» отсеялась, и
+                    «home» превратился в «хомяка».</p>
+                <p>А вот английское «doorway», или «входная дверь», на русской
+                    почве сократилось до «дорвея» или «дора» и стало причисляться к
+                    методам черного SEO. Дорвей – это чаще всего одностраничный сайт с
+                    высокочастотным запросом. При попадании на дор пользователя
+                    автоматически перекидывает на страницу настоящего сайта,
+                    оптимизированную уже под совсем другие запросы.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" id="footer">&copy Годияк Вадим Денисович</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

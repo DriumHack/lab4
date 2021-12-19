@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function exit() {
+            //выдаем запрос на выход
+            if (confirm("Закрыть окно?"))
+                //если ответ утвердительный, то закрываем окно
+                window.close();
+        }
+
+        function plus() {
+            //в переменные записываем значения полей
+            a = +window.document.calc.T1.value;
+            b = +window.document.calc.T2.value;
+            //складываем числа и записываем в поле для результата
+            window.document.calc.T3.value = a + b;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="calc">
+        <table>
+            <tr>
+                <td>Первое число</td>
+                <td><input type="number" name="T1"></td>
+            </tr>
+            <tr>
+                <td>Второе число</td>
+                <td><input type="number" name="T2"></td>
+            </tr>
+            <tr>
+                <td>Сумма</td>
+                <td><input type="number" name="T3" readonly='readonly'></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="B1" value="Расчитать" onclick="plus()"></td>
+                <td><input type="button" name="B2" value="Закрыть" onclick="exit()"></td>
+                <td><input type="reset" name="B3" value="Сброс"></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>
